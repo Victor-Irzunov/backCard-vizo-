@@ -1,0 +1,592 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500;600;700;800;900&display=swap');
+@import url(https://fonts.googleapis.com/css?family=Anaheim);
+@import url(https://fonts.googleapis.com/css?family=Inconsolata);
+*
+{
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	font-family: 'Poppins', sans-serif;
+}
+body
+{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	background: #1c1c25;
+
+}
+.block{
+	width: 100%;
+	min-height: 100vh;
+	position: relative;
+	padding: 10px 30px 10px 30px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+.container{
+	width: 80%;
+}
+.block h2
+{
+	color: #fff;
+	font-size: 30px;
+}
+.block__header
+{
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	padding: 15px 10px;
+}
+.block__header .fa.fa-plus
+{
+	color: #fff;
+	font-size: 30px;
+}
+.block__list
+{
+	position: relative;
+	overflow-x: hidden;
+	height: 500px;
+}
+.block__list::-webkit-scrollbar {
+	display: none;
+}
+.block__list h2
+{
+	color: #fff;
+	font-weight: 500;
+	letter-spacing: 1px;
+}
+.block__list ul
+{
+	position: relative;
+}
+.block__list ul li .list__box
+{
+	position: relative;
+	left: 0;
+	color: #c5c5c5;
+	list-style: none;
+	margin: 4px 0;
+	border-left: 2px solid #24ff0b;
+	transition: 0.5s;
+	overflow: hidden;
+}
+.block__list ul li:hover
+{
+	padding-left: 10px;
+	transition: 0.5s;
+}
+.block__list ul li span
+{
+	position: relative;
+	padding: 8px 0px 8px 8px;
+	display: inline-block;
+	z-index: 1;
+	transition: 0.5s;
+}
+.list__box div:nth-child(1) span{
+	font-size: 30px;
+}
+.block__list ul li .list__box:hover span
+{
+	color: #000;
+}
+.block__list ul li .list__box:before
+{
+	content: '';
+	position: absolute;
+	width: 100%;
+	height: 100%;
+	background: #24ff0b;
+	transform: scaleX(0);
+	transform-origin: left;
+	transition: 0.5s;
+}
+.block__list ul li .list__box:hover:before
+{
+	transform: scaleX(1);
+}
+
+.scroll{
+	overflow-x: scroll;
+	overflow-y: hidden;
+	cursor: pointer;
+}
+.scroll span{
+	font-size: 20px;
+	white-space: nowrap;
+}
+.scroll::-webkit-scrollbar {
+	display: none;
+}
+
+.scroll.active {
+	cursor: grabbing;
+	cursor: -webkit-grabbing;
+}
+.logo
+{
+	width: 35px;
+	position: absolute;
+}
+.fa,fas
+{
+	cursor: pointer;
+}
+.fas.fa-times{
+	cursor: pointer;
+}
+.fa.fa-pencil
+{
+	color: #c0c0c0;
+	position: absolute;
+	top: 10px;
+	right: 80px;
+	font-size: 20px;
+}
+.fa.fa-credit-card
+{
+	color: #c0c0c0;
+	position: absolute;
+	top: 10px;
+	right: 60px;
+	font-size: 30px;
+}
+.fa.fa-trash
+{
+	color: #c0c0c0;
+	position: absolute;
+	top: 10px;
+	right: 15px;
+	font-size: 30px;
+}
+.fas.fa-wifi{
+	color: #fff;
+	position: absolute;
+	top: 90px;
+	left: 130px;
+	transform: rotate(90deg);
+	font-size: 24px;
+}
+.fa.fa-times{
+	color: #484848;
+	position: absolute;
+	right: 60px;
+	top: 0px;
+}
+.list__box:hover .fa-pencil,
+.list__box:hover .fa-credit-card,
+.list__box:hover .fa-trash{
+	color: #000;
+	transition: 0.9s;
+}
+.fa.fa-pencil:hover,
+.fa.fa-credit-card:hover,
+.fa-trash:hover{
+	transform: scale(1.3);
+}
+
+.list__card{
+	width: 100%;
+	margin: 15px 0px 20px 0px;
+	display: none;
+	position: relative;
+	height: 340px;
+}
+.list__card.active{
+	display: block;
+}
+.card
+{
+	position: absolute;
+	display: block;
+	width: 508px;
+	height: 314px;
+	transform-style: preserve-3d;
+	perspective: 500px;
+	margin: 0 auto;
+
+	top: 40%;
+	left: 50%;
+	transform: translate(-50%,-50%);
+	z-index: 1;
+	
+}
+.card .face
+{
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	box-shadow: 0 15px 35px rgba(0,0,0,0.5);
+	border-radius: 15px;
+	transform-style: preserve-3d;
+	backface-visibility: hidden;
+	transition: 1s;
+	overflow: hidden;
+
+}
+.text__text.active{
+	border: 1px solid #fff;
+	padding: 5px 5px;
+	border-radius: 4px;
+}
+.visa{
+	background-color: #0c0014;
+	background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='100%25' height='100%25' viewBox='0 0 1600 800'%3E%3Cg %3E%3Cpolygon fill='%230d1838' points='1600%2C160 0%2C460 0%2C350 1600%2C50'/%3E%3Cpolygon fill='%230e315d' points='1600%2C260 0%2C560 0%2C450 1600%2C150'/%3E%3Cpolygon fill='%230f4981' points='1600%2C360 0%2C660 0%2C550 1600%2C250'/%3E%3Cpolygon fill='%231062a6' points='1600%2C460 0%2C760 0%2C650 1600%2C350'/%3E%3Cpolygon fill='%23117aca' points='1600%2C800 0%2C800 0%2C750 1600%2C450'/%3E%3C/g%3E%3C/svg%3E");
+	background-size: auto 147%;
+	background-position: center;
+}
+.master{
+	background: radial-gradient(circle at 0% 50%, rgba(96, 16, 48, 0) 9px, rgba(0,0,0,.2) 10px, rgba(96, 16, 48, 0) 11px) 0px 10px, radial-gradient(at 100% 100%, rgba(96, 16, 48, 0) 9px, rgba(255,255,255,.2) 10px, rgba(96, 16, 48, 0) 11px), #FF5F00;
+	background-size: 20px 20px;
+}
+.add__card_fon{
+	background: url("https://raw.githubusercontent.com/muhammederdem/credit-card-form/master/src/assets/images/23.jpeg");
+}
+
+.card2.active .face.front {
+	transform: rotateY(180deg);
+}
+.card2.active .face.back{
+	transform: rotateY(360deg);
+}
+
+.blackbar
+{
+	position: absolute;
+	width: 100%;
+	height: 60px;
+	background: #000;
+	top: 40px;
+}
+
+.card:hover .face.front
+{
+	transform: rotateY(180deg);
+}
+.card .face.back
+{
+	transform: rotateY(180deg);
+}
+.card:hover .face.back
+{
+	transform: rotateY(360deg);
+}
+
+.chip
+{
+	position: absolute;
+	top: 80px;
+	left: 50px;
+	max-width: 64px;
+}
+.debit
+{
+	position: absolute;
+	left: 40px;
+	top: 30px;
+	color: #fff;
+	font-weight: 500;
+}
+.bank
+{
+	position: absolute;
+	right: 40px;
+	top: 25px;
+	color: #fff;
+	font-weight: 500;
+	font-style: italic;
+	font-size: 24px;
+}
+.number
+{
+	position: absolute;
+	bottom: 130px;
+	left: 40px;
+	color: #fff;
+	font-weight: 500;
+	letter-spacing: 6px;
+	font-size: 28px;
+	text-shadow: 0 2px 1px #0005;
+	font-family: 'Orbitron', sans-serif;
+}
+.number2
+{
+	position: absolute;
+	bottom: 130px;
+	left: 40px;
+	color: #fff;
+	color: #fff;
+	font-weight: 500;
+	width: 81%;
+	height: 50px;
+	letter-spacing: 5px;
+	font-size: 30px;
+	text-shadow: 0 2px 1px #0005;
+	font-family: 'Orbitron', sans-serif;
+	padding: 6px 9px;
+}
+.number2.active{
+	border: 2px solid #fff;
+	border-radius: 8px;
+}
+.valid
+{
+	position: absolute;
+	bottom: 90px;
+	left: 40px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	color: #fff;
+	font-weight: 300;
+	line-height: 1em;
+	text-align: right;
+}
+.valid span:last-child
+{
+	margin-left: 20px;
+	font-size: 16px;
+	font-weight: 400;
+	letter-spacing: 2px;
+}
+.card__holder
+{
+	position: absolute;
+	bottom: 40px;
+	left: 40px;
+	color: #fff;
+	font-weight: 300;
+	font-size: 16px;
+	letter-spacing: 2px;
+}
+.logo__card{
+	width: 100px;
+	position: absolute;
+	bottom: 10px;
+	right: 20px;
+}
+.black__bar
+{
+	position: absolute;
+	width: 100%;
+	height: 60px;
+	background: #000;
+	top: 40px;
+}
+.ccvText
+{
+	position: absolute;
+	top: 120px;
+	left: 30px;
+}
+.ccvText h5
+{
+	color: #fff;
+	font-weight: 400;
+	font-size: 12px;
+	text-transform: uppercase;
+	letter-spacing: 2px;
+}
+.ccvText .white__bar
+{
+	position: relative;
+	width: 400px;
+	height: 40px;
+	background: #fff;
+	margin-top: 5px;
+}
+.ccvText .ccv
+{
+	position: relative;
+	background: #ccc;
+	color: #111;
+	width: 50px;
+	height: 30px; 
+	font-weight: 600;
+	letter-spacing: 3px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	left: 395px;
+	top: -35px;
+}
+.text__commit
+{
+	position: absolute;
+	bottom: 30px;
+	left: 30px;
+	right: 30px;
+	color: #fff;
+	font-size: 12px;
+	line-height: 1.4em;
+	font-weight: 300;
+}
+/* -modal-add-card---- */
+.block__add{
+	width: 100%;
+	height: 100%;
+	z-index: 10;
+	backdrop-filter: blur(3px);
+
+	position: absolute;
+	top: 0;
+	left: 0;
+	display: none;
+	justify-content: center;
+	align-items: center;
+	border-radius: 10px;
+}
+.block__add.active{
+	display: flex;
+	align-items: flex-end;
+}
+.add__card
+{
+	background: rgba(255,255,255,0.05);
+	border-radius: 20px;
+	height: 310px;
+	overflow: hidden;
+	padding: 20px;
+	position: relative;
+	width: 490px;
+	background: url("https://raw.githubusercontent.com/muhammederdem/credit-card-form/master/src/assets/images/23.jpeg");
+	
+}
+
+.bank__name{
+	color: #fff;
+	font-weight: 500;
+	font-style: italic;
+	font-size: 24px;
+	margin-bottom: 14px;
+	text-align: right;
+	margin-right: 30px;
+	margin-top: 10px;
+}
+input
+{ 
+	background: #ececec; 
+	border: 0;
+	border-radius: 4px;
+	font: 16px Inconsolata, sans-serif;
+	color: #303030;
+	margin: 0 2px 3px 0;
+	padding: 8px 10px;
+	width: 100%;
+	-moz-box-shadow:    1px 1px 0px 1px #0e306e;
+	-webkit-box-shadow: 1px 1px 0px 1px #0e306e;
+	box-shadow:         1px 1px 0px 1px #0e306e;
+}
+
+.valid__err{
+	color: red;
+	font-size: 10px;
+	margin-left: 5px;
+	margin-top: 2px;
+	display: block;
+}
+input:invalid {
+	border: red solid 1px;
+}
+
+
+
+.number__card,
+.date{
+	margin-bottom: 10px;
+
+}
+.number__card input{
+	margin-right: 7px;
+
+}
+
+.date input 
+{
+	margin-right: 10px;
+}
+
+.date__valid 
+{
+	margin-right: 10px;
+	width: 40px;
+}
+
+.commit
+{
+	width: 100%;
+	text-align: left;
+	border-radius: 4px;
+	padding-left: 10px;
+}
+.instructions 
+{
+	letter-spacing: 1px;
+	font: 12px Anaheim, sans-serif; 
+	color: #ace4fa;
+	text-transform: uppercase;
+	display: block;
+}
+.btn__add{
+	background: #2c1ff185;
+	font: 16px Anaheim, sans-serif;
+	color: #ace4fa;
+	border: 1px solid #2c1ff185;
+	border-radius: 4px;
+	cursor: pointer;
+	padding: 5px 5px;
+	margin-top: 15px;
+}
+.btn__add:hover{
+	color: #000;
+	background: #80ff80;
+	border: 1px solid #80ff80;
+}
+.fas.fa-times{
+	position: absolute;
+	top: 20px;
+	right: 30px;
+	color: #fff;
+}
+
+.form{
+	width: 40%;
+	height: 60%;
+	border: 1px solid #fff;
+	border-radius: 10px;
+	z-index: 0;
+	display: flex;
+	flex-direction: column;
+	justify-content: flex-end;
+	padding: 10px 45px;
+	position: absolute;
+	top: 60%;
+	left: 50%;
+	transform: translate(-50%,-50%);
+}
+@media(max-device-width: 770px) {
+	.container{
+		width: 100%;
+	}
+	.block__list{
+		height: 1000px;
+	}
+	.form{
+		width: 60%;
+		height: 40%;
+	}
+}
+@media(max-device-width: 475px) {
+	.form{
+		height: 35%;
+	}
+
+}
