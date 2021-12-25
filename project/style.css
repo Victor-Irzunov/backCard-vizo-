@@ -1,0 +1,262 @@
+@import url('https://fonts.googleapis.com/css2?family=Chakra+Petch:wght@300&family=Dancing+Script&display=swap');
+* {
+    padding: 0;
+    margin: 0;
+    border: 0;
+}
+
+*, *:before, *:after {
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+:focus, :active {
+    outline: none;
+}
+
+a:focus, a:active {
+    outline: none;
+}
+
+nav, footer, header, aside {
+    display: block;
+}
+
+html, body {
+    height: 100%;
+    width: 100%;
+    font-size: 100%;
+    line-height: 1;
+    font-size: 14px;
+    -ms-text-size-adjust: 100%;
+    -moz-text-size-adjust: 100%;
+    -webkit-text-size-adjust: 100%;
+}
+
+input, button, textarea {
+    font-family: inherit;
+}
+
+input::-ms-clear {
+    display: none;
+}
+
+button {
+    cursor: pointer;
+}
+
+button::-moz-focus-inner {
+    padding: 0;
+    border: 0;
+}
+
+a, a:visited {
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: none;
+}
+
+ul li {
+    list-style: none;
+}
+
+img {
+    vertical-align: top;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-size: inherit;
+    font-weight: inherit;
+}
+
+body {
+    background: #202124;
+    font-family: 'Chakra Petch', sans-serif;
+}
+
+.block {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.container {
+    width: 80%;
+}
+
+
+.accordionWrapper {
+    padding: 30px;
+    background: #777474;
+    float: left;
+    /*width: 80%;*/
+    /*margin: 10%;*/
+    box-shadow: 0 1.5em 85px 0 rgba(0, 0, 0, 0.2);
+}
+.accordionWrapper h2{
+    font-size: 30px;
+    margin-bottom: 15px;
+}
+.http{
+    font-size: 20px;
+    font-weight: bold;
+}
+.accordionItem {
+    float: left;
+    display: block;
+    width: 100%;
+    margin-top: 10px;
+}
+.content{
+    display: flex;
+    justify-content: space-between;
+    border-bottom: 1px solid #7f8c8d;
+    padding-bottom: 20px;
+}
+table tr{
+    margin-right: 5px;
+}
+.accordionItemHeading {
+    cursor: pointer;
+    margin: 0px 0px 10px 0px;
+    padding: 10px;
+    background: #2980b9;
+    color: #fff;
+    width: 100%;
+    -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    border-radius: 3px;
+    display: flex;
+    justify-content: space-between;
+}
+.res__block{
+    padding-top: 20px;
+    text-align: center;
+}
+.close .accordionItemContent {
+    height: 0px;
+    transition: height 1s ease-out;
+    -webkit-transform: scaleY(0);
+    -o-transform: scaleY(0);
+    -ms-transform: scaleY(0);
+    transform: scaleY(0);
+    float: left;
+    display: block;
+
+
+}
+
+.open .accordionItemContent {
+    padding: 20px;
+    border: 1px solid #ddd;
+    width: 100%;
+    margin: 0px 0px 10px 0px;
+    display: block;
+    -webkit-transform: scaleY(1);
+    -o-transform: scaleY(1);
+    -ms-transform: scaleY(1);
+    transform: scaleY(1);
+    -webkit-transform-origin: top;
+    -o-transform-origin: top;
+    -ms-transform-origin: top;
+    transform-origin: top;
+
+    -webkit-transition: -webkit-transform 0.4s ease-out;
+    -o-transition: -o-transform 0.4s ease;
+    -ms-transition: -ms-transform 0.4s ease;
+    transition: transform 0.4s ease;
+    box-sizing: border-box;
+}
+
+.open .accordionItemHeading {
+    margin: 0px;
+    -webkit-border-top-left-radius: 3px;
+    -webkit-border-top-right-radius: 3px;
+    border-top-left-radius: 3px;
+    border-top-right-radius: 3px;
+    -webkit-border-bottom-right-radius: 0px;
+    -webkit-border-bottom-left-radius: 0px;
+    -moz-border-radius: 3px 3px 0px 0px;
+    border-bottom-right-radius: 0px;
+    border-bottom-left-radius: 0px;
+    background-color: #bdc3c7;
+    color: #7f8c8d;
+}
+.required:before
+{
+    color: red;
+    content: " *";
+}
+.res__btn{
+    border: 1px solid #2980b9;
+    border-radius: 4px;
+    background: #2980b9;
+    color: white;
+    padding: 5px 8px;
+    font-size: 20px;
+}
+.res__btn:hover{
+    background: blue;
+    border: 1px solid blue;
+}
+.res{
+    width: 450px;
+}
+.method__post{
+    border: 1px solid #49cc90;
+    border-radius: 4px;
+    background: #49cc90;
+    padding: 5px 15px;
+    color: white;
+}
+.method__get{
+    border: 1px solid #61affe;
+    border-radius: 4px;
+    background: #61affe;
+    padding: 5px 20px;
+    color: white;
+}
+.path{
+    font-size: 20px;
+    color: #000;
+    font-weight: bold;
+}
+.accordionWrapper{
+    font-weight: bold;
+}
+.p{
+    font-weight: normal;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

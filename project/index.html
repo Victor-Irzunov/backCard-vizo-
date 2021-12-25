@@ -1,0 +1,251 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link href="style.css" rel="stylesheet">
+    <title>Document</title>
+</head>
+<body>
+<div class="block">
+    <div class="container">
+        <div class="box">
+
+            <div class="accordionWrapper">
+                <h2>API</h2>
+                <a href="" class="http">https://boiling-spire-55533.herokuapp.com</a>
+                <div class="accordionItem close">
+                    <div class="accordionItemHeading">
+                        <div>
+                            <span class="method__post">POST</span>
+                            <span class="path">/api/user/registration</span>
+                        </div>
+                        <div>
+                            <span>Регистрация пользователя</span>
+                        </div>
+                    </div>
+
+                    <div class="accordionItemContent">
+                        <div class="content">
+                            <div class="parameters">
+                                <p>Параметры: </p>
+                                <table>
+                                    <tr>
+                                        <td class="required">email: &nbsp;</td>
+                                        <td>string</td>
+                                    </tr>
+                                    <tr>
+                                        <td></td>
+                                        <td></td>
+                                    </tr>
+                                    <tr>
+                                        <td class="required">password: &nbsp;</td>
+                                        <td>string</td>
+                                    </tr>
+                                    <tr>
+                                        <td></td>
+                                        <td>min: 3; max: 32</td>
+                                    </tr>
+                                </table>
+                            </div>
+                            <div class="req">
+                                <span>Body:</span></br>
+                                </br>
+                                <span>
+                                    {
+                                        "email": "example@mail.ru",
+                                        "password": "1111"
+                                    }
+                                </span>
+                            </div>
+                            <div class="res">
+                                <span>Пример ответа:</span></br>
+                                </br>
+                                <span class="res__span">
+                                    {token: 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MTIsI…wNzB9.bJV45VSUf6B88qHpXeyglnrSI2NGm7FElaPP3dTz3Uw'}
+                                </span>
+                            </div>
+                        </div>
+<!--                        <div class="res__block">-->
+<!--                            <div>-->
+<!--                                <a href="#"-->
+<!--                                   class="res__btn">Запрос</a>-->
+<!--                            </div>-->
+<!--                            </br>-->
+<!--                            <p>Ответ:</p>-->
+<!--                            <p class="res__content"></p>-->
+<!--                        </div>-->
+                    </div>
+                </div>
+
+
+                <div class="accordionItem close">
+                    <div class="accordionItemHeading">
+                        <div>
+                            <span class="method__post">POST</span>
+                            <span class="path">/api/user/login</span>
+                        </div>
+                        <div>
+                            <span>Авторизация пользователя</span>
+                        </div>
+                    </div>
+
+                    <div class="accordionItemContent">
+                        <div class="content">
+                            <div class="parameters">
+                                <p>Параметры: </p>
+                                <table>
+                                    <tr>
+                                        <td class="required">email: &nbsp;</td>
+                                        <td>string</td>
+                                    </tr>
+                                    <tr>
+                                        <td></td>
+                                        <td></td>
+                                    </tr>
+                                    <tr>
+                                        <td class="required">password: &nbsp;</td>
+                                        <td>string</td>
+                                    </tr>
+                                    <tr>
+                                        <td></td>
+                                        <td>min: 3; max: 32</td>
+                                    </tr>
+                                </table>
+                            </div>
+                            <div class="req">
+                                <span>Body:</span></br>
+                                </br>
+                                <span>
+                                    {
+                                        "email": "example@mail.ru",
+                                        "password": "1111"
+                                    }
+                                </span>
+                            </div>
+                            <div class="res">
+                                <span>Пример ответа:</span></br>
+                                </br>
+                                <span class="res__span">
+                                    {token: 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MTIsI…wNzB9.bJV45VSUf6B88qHpXeyglnrSI2NGm7FElaPP3dTz3Uw'}
+                                </span>
+                            </div>
+                        </div>
+<!--                        <div class="res__block">-->
+<!--                            <div>-->
+<!--                                <a href="#"-->
+<!--                                   class="res__btn">Запрос</a>-->
+<!--                            </div>-->
+<!--                            </br>-->
+<!--                            <p>Ответ:</p>-->
+<!--                            <p class="res__content"></p>-->
+<!--                        </div>-->
+                    </div>
+                </div>
+
+                <div class="accordionItem close">
+                    <div class="accordionItemHeading">
+                        <div>
+                            <span class="method__get">GET</span>
+                            <span class="path">/api/user/auth</span>
+                        </div>
+                        <div>
+                            <span>Проверка пользователя на авторизованность</span>
+                        </div>
+                    </div>
+
+                    <div class="accordionItemContent">
+                        <div class="content">
+                            <div class="parameters">
+                                <p>Параметры: </p>
+                                </br>
+<!--                                <table>-->
+<!--                                    <tr>-->
+<!--                                        <td class="required">email: &nbsp;</td>-->
+<!--                                        <td>string</td>-->
+<!--                                    </tr>-->
+<!--                                    <tr>-->
+<!--                                        <td></td>-->
+<!--                                        <td></td>-->
+<!--                                    </tr>-->
+<!--                                    <tr>-->
+<!--                                        <td class="required">password: &nbsp;</td>-->
+<!--                                        <td>string</td>-->
+<!--                                    </tr>-->
+<!--                                    <tr>-->
+<!--                                        <td></td>-->
+<!--                                        <td>min: 3; max: 32</td>-->
+<!--                                    </tr>-->
+<!--                                </table>-->
+                                <div class="headers">
+                                    <span>Headers:</span></br>
+                                    </br>
+                                    <span class="res__span required">
+                                    headers: {</br>
+                                        'Authorization': `Bearer ${token}`</br>
+                                        }
+                                </span>
+                                </div>
+                            </div>
+<!--                            <div class="req">-->
+<!--                                <span>Body:</span></br>-->
+<!--                                </br>-->
+<!--                                <span>-->
+<!--                                    {-->
+<!--                                        "email": "example@mail.ru",-->
+<!--                                        "password": "1111"-->
+<!--                                    }-->
+<!--                                </span>-->
+<!--                            </div>-->
+
+                            <div class="res">
+                                <span>Пример ответа:</span></br>
+                                </br>
+                                <span class="res__span">
+                                    {token: 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MTIsI…wNzB9.bJV45VSUf6B88qHpXeyglnrSI2NGm7FElaPP3dTz3Uw'}
+                                </span>
+                            </div>
+                        </div>
+                        </br>
+<!--                        <div class="res__block">-->
+<!--                            <div>-->
+<!--                                <a href="#"-->
+<!--                                   class="res__btn">Запрос</a>-->
+<!--                            </div>-->
+<!--                            </br>-->
+<!--                            <p>Ответ:</p>-->
+<!--                            <p class="res__content"></p>-->
+<!--                        </div>-->
+                        <p class="p">Пример: Запрос при перезагрузке страницы</p>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+</div>
+
+
+<script>
+    let accItem = document.getElementsByClassName('accordionItem');
+    let accHD = document.getElementsByClassName('accordionItemHeading');
+    for (i = 0; i < accHD.length; i++) {
+        accHD[i].addEventListener('click', toggleItem, false);
+    }
+
+    function toggleItem() {
+        var itemClass = this.parentNode.className;
+        for (i = 0; i < accItem.length; i++) {
+            accItem[i].className = 'accordionItem close';
+        }
+        if (itemClass == 'accordionItem close') {
+            this.parentNode.className = 'accordionItem open';
+        }
+    }
+</script>
+
+<script src="js.js"></script>
+</body>
+</html>
